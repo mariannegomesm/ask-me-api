@@ -8,25 +8,25 @@ import { CommentsService } from './comments.service';
 @Controller("/comments")
 @ApiTags("Comments")
 export class CommentsController {
-  constructor(private readonly userService: CommentsService) {}
+  constructor(private readonly commentService: CommentsService) {}
 
   @Get()
   public async GetAllComments(): Promise <CommentsEntity []> {
-    return this.userService.GetAllComments();
+    return this.commentService.GetAllComments();
   }
 
   @Post()
-  public async CreateNewComment(@Body() user: CommentsDto){
-    return this.userService.CreateNewComment(user)
+  public async CreateNewComment(@Body() comment: CommentsDto){
+    return this.commentService.CreateNewComment(comment)
   }
 
   @Put(":id")
   public async UpdateComment(@Param("id", ParseIntPipe) id: number, @Body() userData: CommentsDto){
-    return this.userService.UpdateComment(id, userData);
+    return this.commentService.UpdateComment(id, userData);
   }
 
   @Delete(":id")
   public async DeleteComment(@Param("id", ParseIntPipe) id: number){
-    return this.userService.DeleteComment(id);
+    return this.commentService.DeleteComment(id);
   }
 }

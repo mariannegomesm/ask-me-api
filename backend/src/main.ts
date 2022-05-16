@@ -7,11 +7,12 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
     .setTitle('ASK ME')
-    .setDescription('Apresenta-se EndPoints desenvolvidos para o projeto "ASK ME", a nível de estudos')
+    .setDescription('Está presente os EndPoints desenvolvidos para o projeto "ASK ME", a nível de estudos')
     .setVersion('1.0')
     .build();
+
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup('askme', app, document);
 
   await app.listen(3000);
 }
