@@ -1,6 +1,6 @@
 # ask-me
 
-#### Sobre: 
+#### Sobre ( Projeto ainda em desenvolvimento ): 
 Projeto iniciado para dar continuidade aos estudos voltados ao Backend com Node, Nest e TypeORM 💚
 
 Extra: Swagger configurado. <br />
