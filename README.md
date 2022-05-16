@@ -1,9 +1,10 @@
 # ask-me
 
 #### Sobre: 
-Projeto iniciado para dar continuidade aos estudos voltados ao Backend com Nest e TypeORM 💚
+Projeto iniciado para dar continuidade aos estudos voltados ao Backend com Node, Nest e TypeORM 💚
 
-Extra: Swagger configurado. 
+Extra: Swagger configurado. <br />
+Funcionalidades: (Crud) - Permite listar, criar, atualizar e deletar comentários
 
 ##
 
