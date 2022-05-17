@@ -13,6 +13,14 @@ export class CommentsService {
     return await this.model.find()
   }
 
+  public async GetComment(id: number){
+    const element = await this.model.findOneBy({
+      id: id
+    })
+
+    return element;
+  }
+
   public async CreateNewComment(comments: CommentsDto){
     await this.model.save(comments) 
     return "Comentário criado com sucesso!";

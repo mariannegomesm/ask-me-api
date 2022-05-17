@@ -12,6 +12,13 @@ export class UserServices{
         return await this.model.find();
     }
 
+    public async GetUser(id){
+        const element = this.model.findOneBy({
+            id: id
+        })
+        return element;        
+    }
+
     public async CreateNewUser(user: UserEntity):Promise<UserEntity>{
         return await this.model.save(user);
     }

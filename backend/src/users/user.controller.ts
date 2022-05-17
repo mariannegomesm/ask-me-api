@@ -15,6 +15,11 @@ export class UserController{
         return this.userService.GetAllUsers()
     }
 
+    @Get(":id")
+    public async GetUser(@Param("id", ParseIntPipe) id: number){
+        return this.userService.GetUser(id);
+    }
+
     @Post()
     public async CreateNewUser(@Body() user: UserEntity): Promise<UserEntity>{
         return this.userService.CreateNewUser(user)

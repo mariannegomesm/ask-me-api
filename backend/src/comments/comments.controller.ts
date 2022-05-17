@@ -15,6 +15,11 @@ export class CommentsController {
     return this.commentService.GetAllComments();
   }
 
+  @Get(":id") 
+  public async GetComment(@Param("id", ParseIntPipe) id: number){
+    return this.commentService.GetComment(id);
+  }
+
   @Post()
   public async CreateNewComment(@Body() comment: CommentsDto){
     return this.commentService.CreateNewComment(comment)
