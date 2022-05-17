@@ -4,7 +4,7 @@
 Projeto iniciado para dar continuidade aos estudos voltados ao Backend com Node, Nest e TypeORM 💚
 
 Extra: Swagger configurado. <br />
-Funcionalidades: (Crud) - Permite listar, criar, atualizar e deletar comentários
+Funcionalidades: (Crud) - Permite listar, criar, atualizar, deletar e vincular (Comentários / Usuários)
 
 ##
 
@@ -25,4 +25,4 @@ Para visualizar as informações de acordo com o Swagger, basta sequir o process
 ##
 
 #### Swagger: 
-![image](https://user-images.githubusercontent.com/66935004/168666157-78489de2-640e-4b5e-8891-399acc1348ef.png)
+![image](https://user-images.githubusercontent.com/66935004/168828419-3502c5ba-ee6e-4639-8620-1da9bb6fa7ef.png)
