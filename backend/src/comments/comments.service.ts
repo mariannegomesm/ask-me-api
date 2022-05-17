@@ -14,13 +14,8 @@ export class CommentsService {
   }
 
   public async CreateNewComment(comments: CommentsDto){
-    try{
-      await this.model.save(comments) 
-      return "Comentário criado com sucesso!";
-    }
-    catch(error){
-      return "Erro ao criar comentário!"
-    }
+    await this.model.save(comments) 
+    return "Comentário criado com sucesso!";
   }
 
   public async UpdateComment(id: number, comments: CommentsDto){
