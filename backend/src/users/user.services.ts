@@ -15,4 +15,12 @@ export class UserServices{
     public async CreateNewUser(user: UserEntity):Promise<UserEntity>{
         return await this.model.save(user);
     }
+
+    public async UpdateUser(id: number, user: UserEntity){
+        return await this.model.update(id, user)
+    }
+
+    public async DeleteUser(id: number){
+        return await this.model.delete(id)
+    }
 }

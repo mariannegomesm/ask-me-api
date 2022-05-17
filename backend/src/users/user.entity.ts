@@ -20,6 +20,10 @@ export class UserEntity{
     @Column("text")
     password: string;
 
+    @ApiProperty()
+    @Column()
+    isAdmin: boolean;
+
     @OneToMany(() => CommentsEntity, comment => comment.user)
     comments: CommentsEntity[];
 }

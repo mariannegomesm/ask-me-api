@@ -1,4 +1,4 @@
-import { IsString, IsArray } from "class-validator";
+import { IsString, IsArray, IsBoolean } from "class-validator";
 
 export class UserDto{
     @IsString()
@@ -9,4 +9,7 @@ export class UserDto{
 
     @IsString()
     password: string;
+
+    @IsBoolean()
+    isAdmin: boolean;
 }

@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from "@nestjs/common";
+import { Body, Controller, Get, Param, ParseIntPipe, Post, Put, Delete } from "@nestjs/common";
 import { ApiTags } from "@nestjs/swagger";
 
 import { UserEntity } from "./user.entity";
@@ -18,5 +18,15 @@ export class UserController{
     @Post()
     public async CreateNewUser(@Body() user: UserEntity): Promise<UserEntity>{
         return this.userService.CreateNewUser(user)
+    }
+
+    @Put(":id")
+    public async UpdateUser(@Param("id", ParseIntPipe) id: number,  @Body() user: UserEntity){
+        return this.userService.UpdateUser(id, user);
+    }
+
+    @Delete(":id")
+    public async DeleteUser(@Param("id", ParseIntPipe) id: number){
+        return this.userService.DeleteUser(id);
     }
 }
