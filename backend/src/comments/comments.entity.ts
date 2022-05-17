@@ -1,7 +1,9 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { UserEntity } from "src/users/user.entity";
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 
 @Entity()
+
 export class CommentsEntity{
     @PrimaryGeneratedColumn()
     id: number;
@@ -9,6 +11,6 @@ export class CommentsEntity{
     @Column("text")
     message: string;
 
-    @Column("text")
-    author: string;
+    @ManyToOne(() => UserEntity, user => user.comments)
+    user: UserEntity;
 }

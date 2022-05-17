@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
+import { UserModule } from './users/user.module';
 import { CommentsModule } from './comments/comments.module';
 
 @Module({
-  imports: [CommentsModule, TypeOrmModule.forRoot({
+  imports: [CommentsModule, UserModule, TypeOrmModule.forRoot({
     type: 'mssql',
     host: 'localhost',
     port: 1433,
