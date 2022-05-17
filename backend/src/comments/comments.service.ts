@@ -14,11 +14,8 @@ export class CommentsService {
   }
 
   public async GetComment(id: number){
-    const element = await this.model.findOneBy({
-      id: id
-    })
-
-    return element;
+    const comment = await this.model.findOneBy({ id: id })
+    return comment;
   }
 
   public async CreateNewComment(comments: CommentsDto){

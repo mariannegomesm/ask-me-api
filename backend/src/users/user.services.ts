@@ -13,10 +13,8 @@ export class UserServices{
     }
 
     public async GetUser(id){
-        const element = this.model.findOneBy({
-            id: id
-        })
-        return element;        
+        const user = this.model.findOneBy({ id: id})
+        return user;        
     }
 
     public async CreateNewUser(user: UserEntity):Promise<UserEntity>{
