@@ -10,6 +10,12 @@ export class UserDto{
     @IsString()
     password: string;
 
+    @IsString()
+    data: string;
+
+    @IsString()
+    photo: string;
+
     @IsBoolean()
     isAdmin: boolean;
 }

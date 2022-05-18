@@ -6,6 +6,10 @@ export class CommentsDto{
     @ApiProperty()
     message: string;
 
+    @IsString()
+    @ApiProperty()
+    photo: string;
+
     @IsObject()
     @ApiProperty()
     user: object;

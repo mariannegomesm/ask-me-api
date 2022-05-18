@@ -10,7 +10,11 @@ export class CommentsService {
   constructor(@InjectRepository(CommentsEntity) private model: Repository<CommentsEntity>) {}
 
   public async GetAllComments(): Promise<CommentsEntity []> {
-    return await this.model.find()
+    const comments = await this.model.find({
+      relations: [ "user" ]
+    });
+
+    return comments
   }
 
   public async GetComment(id: number){

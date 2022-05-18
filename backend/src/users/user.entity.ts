@@ -24,6 +24,10 @@ export class UserEntity{
     @Column()
     isAdmin: boolean;
 
+    @ApiProperty()
+    @Column("text")
+    photo: string;
+
     @OneToMany(() => CommentsEntity, comment => comment.user)
     comments: CommentsEntity[];
 }
